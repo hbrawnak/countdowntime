@@ -32,7 +32,7 @@ func main() {
 	}
 
 	for range time.Tick(1 * time.Second) {
-		remainingTime := getTimeRemaining(v)
+		remainingTime := getRemainingTime(v)
 
 		if remainingTime.t <= 0 {
 			fmt.Println("Countdown reached")
@@ -45,7 +45,7 @@ func main() {
 
 }
 
-func getTimeRemaining(t time.Time) countdown {
+func getRemainingTime(t time.Time) countdown {
 	currentTime := time.Now()
 	difference := t.Sub(currentTime)
 
